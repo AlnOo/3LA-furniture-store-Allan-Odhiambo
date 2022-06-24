@@ -1,7 +1,5 @@
-let menu = document.querySelector('#menu-btn');
-let nav = document.querySelector('.header .navbar');
-
-menu.onclick=() => {
-    menu.classList.toggle('fa-times');
-    nav.classList.toggle('active')
-}
+let mouseghover1 = document.getElementByClass("box")
+let mouseghover2 = document.getElementByClass(`box boxb`)
+let homeBtn= document.getElementById("Home")
+let galleryBtn= document.getElementById("Gallery")
+let ContactBtn= document.getElementById("Contat")
