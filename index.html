@@ -25,9 +25,9 @@
 			<!-- home section starts -->
 			<div class="home">
 				<h3>
-					located at: <br />
-					Shop no. 16 <br />
-					Handshake building <br />
+					located at:
+					Shop no. 16
+					Handshake building
 					Fedha road Embakasi					
 				</h3>
 			</div>
@@ -68,12 +68,14 @@
 					<div class="form">
 						<h4>Drop us an inquiry</h4>
 						<label for="name">Name</label>
-						<input type="text"  id="name" >
+						<input type="text" placeholder="Enter your name.." id="name" >
 						<label for="email">Email</label>
-						<input type="email" id ="email">
+						<input type="email" placeholder="Enter your email.." id ="email">
 						<label for="message">Message</label>
 						<textarea name="message" cols="30" rows="10"></textarea>
-						<input type="submit"  id="submit">
+						<button onclick="sendContact();">Send contact</button>
+						<form onsubmit="return false">
+						</form>
 					</div>
 					<div class="image">
 						<img src="./images/comfy chair.png" alt="">
