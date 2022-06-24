@@ -1,15 +1,9 @@
+    const button = document.getElementById('submitBtn');
+    button.addEventListener("click", function() {
+    document.form1.submit();
+    });
 
-var fields {}
-
-document.addEventListener("DOMContentLoaded", function() {
-    fields.firstName = document.getElementById('firstName');
-    fields.lastName = document.getElementById('lastName');
-    fields.email = document.getElementById('email');
-    fields.address = document.getElementById('address');
-    fields.houseNumber = document.getElementById('houseNumber');
-    fields.country = document.getElementById('country');
-    fields.password = document.getElementById('password');
-    fields.passwordCheck = document.getElementById('passwordCheck');
-    fields.newsletter = document.getElementById('newsletter');
-    fields.question = document.getElementById('question');
-   })
+    const menuEvent = document.getElementsByClassName('logo');
+    menuEvent.addEventListener("click", function() {
+    document.body.style.color = pink
+    });

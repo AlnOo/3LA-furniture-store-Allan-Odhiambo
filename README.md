@@ -1,6 +1,6 @@
 # 3LA furniture store website
 ## description
-This is a simple furniture website landing page that showcases the current featured products of the store. the landing page attracts the customer to navigate easily to other stores categories of product.
+This is a simple furniture website landing page that showcases the current featured products of the store. the landing page targets to attract the customer attention to the featured products.
 
 ## Installation requirements
 You don't need to install anything you only need internet connection
