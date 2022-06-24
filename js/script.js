@@ -1,5 +1,6 @@
-let mouseghover1 = document.getElementByClass("box")
-let mouseghover2 = document.getElementByClass(`box boxb`)
-let homeBtn= document.getElementById("Home")
-let galleryBtn= document.getElementById("Gallery")
-let ContactBtn= document.getElementById("Contat")
+
+let galleryBtn = document.getElementById("Gallery")
+    galleryBtn.addEventListener ('click', (e) => {
+        location.href = Gallery.html
+    })
+    
