@@ -1,0 +1,375 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda+One&family=Nunito:wght@200;300;400;500;600&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Nunito", sans-serif;
+	box-sizing: border-box;
+	border: none;
+	outline: none;
+	/* transition: all 0.1s ease; */
+	text-decoration: none;
+}
+:root {
+	--main-color: #1e1b18;
+	--background: #5191ea;
+	--inputs: #879db7;
+	--border: 0.1rem solid rgba(0, 0, 0, 0.1);
+	--box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+html {
+	font-size: 62.5%;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+::selection {
+	background-color: #9c1428;
+}
+::-webkit-scrollbar {
+	height: 0.5rem;
+	width: 1rem;
+}
+::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+	background-color: var(--background);
+}
+.heading{
+	text-align: left;
+	font-size: 3.5rem;
+}
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	padding: 2rem 4rem;
+    z-index: 999;
+}
+.header a {
+	color: #fff;
+}
+.header .logo {
+	font-size: rem;
+	color: rgb(190, 30, 30);
+}
+.header .navbar a {
+	font-size: 2.5rem;
+	margin-left: 3rem;
+}
+.home-header {
+	background: url(../images/heroimage2.jpg);
+	height: 100vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.home h3 {
+	color: rgb(36, 29, 29);
+	font-size: 2rem;
+	position: absolute;
+	left: 15.5%;
+	top: 2.5%;
+	line-height: 1.2em;
+	letter-spacing: 0.2px;
+	font-weight: 400;
+}
+.header .logo {
+	font-size: 10rem;
+	font-weight: bolder;
+	margin-left: 1rem;
+}
+#menu-btn {
+	display: none;
+	font-size: 2.5rem;
+	color: var(--main-color);
+	cursor: pointer;
+}
+.about{
+	background-color: var(--background);
+	padding: 3rem ;
+	color: var(--background);
+}
+.about .main{
+	background-color: var(--main-color);
+	padding:1rem 3rem 3rem 3rem;
+}
+
+
+.about .main .box-container{
+	display: flex;
+	/* gap: 2rem; */
+	flex-wrap: wrap;
+	height: 70vh;
+	justify-content:space-evenly;
+}
+.about .main .text{
+	font-size: 3rem;
+	padding-right: 1rem;
+}
+.about .main .text h4{
+	font-size: 3.5rem;
+	font-weight: 600;
+
+}
+.about .main .box-container .image img{
+	object-fit: cover;
+	height: 45rem;
+	width: 25rem;
+}
+.about .main .box-container .img1{
+	align-self: flex-end;
+}
+.about .main .box-container .img2{
+	align-self: center;
+}
+
+.gallery .main .box-container{
+	display: flex;
+	gap: 1.5rem;
+	flex-wrap: wrap;
+}
+.gallery .main .box-container .box{
+	flex: 1 1 30%;
+}
+.gallery .main .box-container .boxb{
+	flex: 1 1 35%;
+}
+
+.gallery .main .box-container .box img{
+	height: 34rem;
+	width: 100%;
+	object-fit: cover;
+}
+.gallery{
+	background-color: var(--background);
+	padding: 3rem ;
+	color: var(--background);
+}
+	
+
+.gallery .main{
+	background-color: var(--main-color);
+	padding:1rem 3rem 3rem 3rem;
+}
+.contact .main .box-container .image{
+	width: 40rem;
+}
+.contact{
+	background-color: var(--background);
+	padding: 3rem ;
+	color: var(--background);
+
+}
+.contact .main{
+	background-color: var(--main-color);
+	padding:2rem 3rem 3rem 3rem;
+
+}
+.contact .main .box-container .form textarea,.contact .main .box-container .form input{
+	padding: .5rem 2rem;
+    margin: 1rem 0;
+    width: 100%;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    border: .1rem solid rgba(0, 0, 0, .1);
+	background-color: var(--inputs);
+}
+.contact .main .box-container .form label{
+	font-size: 2rem;
+	font-weight: bold;
+}
+.contact .main .box-container .form textarea{
+	
+    height: 18rem;
+    resize: none;
+    width: 100%;
+}
+.contact .main .box-container .form{
+	font-size: 2.5rem;
+}
+
+.contact .main .box-container{
+	display: flex;
+	gap: 2.5rem;
+	justify-content: center;
+	padding-top: 2rem;
+	flex-wrap: wrap;
+}
+.contact .main .box-container .image img{
+	height: 100%;
+	width:100%
+}
+#submit{
+	width: 30%;
+	color: white;
+	border-radius: 25%;
+}
+
+
+
+
+
+/* media querries */
+@media (max-width: 1300px) {
+	.home-header h3 {
+		color: #fff;
+		font-size: 5rem;
+		position: absolute;
+		left: 15.5%;
+		top: 13%;
+	}
+}
+@media (max-width: 1260px){
+	.about .main .box-container .image img{
+	object-fit: cover;
+	height: 45rem;
+	width: 17rem;
+}
+	.about .main .text{
+	font-size: 2.6rem;
+	padding-right: 1rem;
+}
+.about .main .text h4{
+	font-size: 3.1rem;
+	font-weight: 600;
+}
+}
+@media (max-width:1050px){
+	.about .main .box-container .image img{
+	object-fit: cover;
+	height: 30rem;
+	width: 17rem;
+}
+.about .main .box-container .img1{
+	align-self: flex-start;
+}
+.about .main .box-container .img2{
+	align-self: flex-start;
+}
+.about .main .box-container{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	height: fit-content;
+	justify-content:space-evenly;
+}
+}
+@media (max-width: 987px){
+	.about .main .text{
+	font-size: 2.6rem;
+	padding-right: 1rem;
+	width: 65%;
+
+}
+}
+
+@media (max-width: 768px) {
+	#menu-btn {
+		display: initial;
+		transition: 0.1s linear;
+		margin-right: 0.5rem;
+		font-size: 3rem;
+	}
+	#menu-btn.fa-times {
+		transform: rotate(180deg);
+		color: red;
+	}
+	.header .navbar {
+		position: absolute;
+		top: 99%;
+		left: 0;
+		right: 0;
+		background-color: var(--main-color);
+		border-top: var(--border);
+		border-bottom: var(--border);
+		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+		transition:linear .2s ease;
+	}
+	.header .navbar a {
+		margin: 1.5rem;
+		padding: 1.5rem;
+		display: block;
+		border: 0.2rem solid rgba(0, 0, 0, 0.1);
+		border-left: 0.5rem solid var(--inputs);
+		background: var(--background);
+	}
+	.header .active {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+	}
+	.header .logo {
+		font-size: 3.7rem;
+		font-weight: bold;
+		margin-left: 1rem;
+	}
+}
+@media (max-width: 500px){
+	.about .main h4{
+	text-decoration: underline;
+}
+	.about .main .box-container .image{
+		width: 100%;
+	}
+	.about .main .box-container .image img{
+	object-fit: cover;
+	height: 30rem;
+	width:100%;
+}
+.about{
+	padding: 0 1rem;
+}
+.about .main{
+	background-color: var(--main-color);
+	padding:1rem 1rem 3rem 1rem;
+}
+.gallery{
+	padding:0 1rem;
+}
+.gallery .main{
+	padding:1rem 1rem 3rem 1rem;
+}
+	.about .main .text{
+	font-size: 2rem;
+	padding-right: 1rem;
+}
+.about .main .text h4{
+	font-size: 2.5rem;
+	font-weight: 600;
+}
+.gallery .main .box-container .box{
+	flex: 1 1 100%;
+}
+
+
+
+}
+@media (max-width: 450px) {
+	html {
+		font-size: 55%;
+	}
+	.home-header h3 {
+		color: #fff;
+		font-size: 5rem;
+		position: absolute;
+		left: 10%;
+		top: 13%;
+	}
+}
+@media (max-width: 375px){
+	.about .main .text{
+	font-size: 1.6rem;
+	padding-right: 1rem;
+}
+	.about .main .text h4{
+	font-size: 2.5rem;
+	font-weight: 600;
+}
+	#submit{
+	width: 50%;
+	color: white;
+	border-radius: 25%;
+}
+}
