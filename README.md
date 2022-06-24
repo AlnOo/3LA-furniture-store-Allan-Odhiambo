@@ -1,4 +1,4 @@
-# Furniture website UI
+# 3LA furniture store website
 ## description
 This is a simple furniture website landing page.
 
@@ -12,7 +12,7 @@ CSS
 JS
 
 ## Development
-  Want to contribute? Okay cool fork and clone the template and upload code when done.
+  any extra development to improve the code is welcome. kindly fork and clone the wedbsite code and upload changes when done.
 
 ## Live site
 Find link to the live site here :
