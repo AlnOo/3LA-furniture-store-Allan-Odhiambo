@@ -4,34 +4,36 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>3LA Furniture and Home Decor</title>
 		<link rel="stylesheet" href="./css/style.css" />
         <link
 			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-		/>
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
 	</head>
 	<body>
 		<section class="home-header">
-			<!-- header section -->
+<!-- header section start-->
 			<header class="header">
 				<a href="#home" class="logo">3LA</a>
 				<nav class="navbar">
+					<span class = "navbar">
+					<i class = "fas fa-cart-plus"></i>
+					</span>
+					<div class ="cart-items">0</div>
 					<a href="#Gallery">Gallery</a>
 					<a href="#Contact">Contact</a>
 				</nav>
 			</header>
-			<!-- header section stops -->
-			<!-- home section starts -->
+<!-- header section stops -->
+<!-- home section starts -->
 			<div class="home">
 				<h3>
 					located at: Shop no. 16 Handshake building Fedha road Embakasi					
 				</h3>
 			</div>
 		</section>
-		
- <!-- openweather api -->
-  
+ <!-- openweather map api start -->
+ <h4>Check any city current weather</h4>
     <div class="input">
 		<input type="text" placeholder="Enter the city" class="input_text">
 		<input type="submit" value="Submit" class="submit">
@@ -46,8 +48,8 @@
 		<p class="desc"></p>
 	  </div>
 	</div>
-
-		<!-- gallery section starts -->
+<!-- openweather map api stop -->
+<!-- gallery section starts -->
 		<section class="gallery">
 			<div class="main">
 				<h4 class="heading">Gallery</h4>
@@ -95,13 +97,13 @@
 				</div>
 			</div>
 		</section>
-		<!-- gallery section stops -->
-		<!-- contact section -->
+<!-- gallery section stops -->
+<!-- contact section start-->
 		<section class="contact">
 			<div class="main">
 				<h4 class="heading">Contact Us</h4>
 				<div class="box-container">
-					<div class="form" id="formomn">
+					<div class="form" id="form">
 						<h6>Place Order</h6>
 						<label for="name">Name</label>
 						<input type="text" placeholder="Enter your name.." id="name" >
@@ -112,15 +114,13 @@
 						<input type="submit" value="Send form" id="submitBtn">
 						</form>
 					</div>
-					<div class="image">
-						<img src="./images/comfy chair.png" alt="">
+					<div class="image"><img src="./images/comfy chair.png" alt="">
 					</div>
 				</div>
-				
-
 				</div>
 			</div>
 		</section>
+<!-- contact section stops-->
 		<script src="./js/script.js"></script>
 	</body>
 </html>

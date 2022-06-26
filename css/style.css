@@ -7,7 +7,6 @@
 	box-sizing: border-box;
 	border: none;
 	outline: none;
-	/* transition: all 0.1s ease; */
 	text-decoration: none;
 }
 :root {
@@ -27,7 +26,7 @@ html {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	position: relati    ve;
+	position: sticky;
     font-size: 2.5rem;
 	margin-left: 3rem;
 	padding: 2rem 4rem;
@@ -35,9 +34,8 @@ html {
 }
 
 .header .logo {
-	font-size: rem;
 	color: rgb(190, 30, 30);
-	font-size: 10rem;
+	font-size: 20rem;
     font-weight: bolder;
 	margin-left: 1rem;
 }
@@ -50,14 +48,20 @@ html {
 	background-size: cover;
 	position: relative;
 }
+.cart-btn {
+	position: relative;
+	cursor: pointer;
+  }
+  .cart-items {
+	position: absolute;
+	top: 120px;
+	right: 210px;
+	background: white;
+	padding: 0 1px;
+	border-radius: 10%;
+	color: red;
+  }
 
-.home-header h3 {
-    color: #fff;
-    font-size: 3rem;
-    position: absolute;
-    left: 30%;
-    top: 95%;
-}
 .gallery .main .box-container{
 	display: flex;
 	gap: 1.5rem;
@@ -175,9 +179,21 @@ html {
 	margin-top: 0.7rem;
 	letter-spacing: var(--mainSpacing);
 	color: var(--primaryColor);
-	
   }
 
+ h3 {
+    color: #fff;
+    position: absolute;
+    left: 30%;
+    top: 95%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 2.5rem;
+	margin-left: 3rem;
+	padding: 2rem 4rem;
+    z-index: 999;
+ }
 
 .input{
 	text-align: center;
