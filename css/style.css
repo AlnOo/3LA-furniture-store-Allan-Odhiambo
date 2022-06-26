@@ -26,7 +26,7 @@ html {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	position: sticky;
+	position: relative;
     font-size: 2.5rem;
 	margin-left: 3rem;
 	padding: 2rem 4rem;
@@ -51,8 +51,8 @@ html {
 .cart-btn {
 	position: relative;
 	cursor: pointer;
-  }
-  .cart-items {
+}
+.cart-items {
 	position: absolute;
 	top: 120px;
 	right: 210px;
@@ -60,7 +60,7 @@ html {
 	padding: 0 1px;
 	border-radius: 10%;
 	color: red;
-  }
+}
 
 .gallery .main .box-container{
 	display: flex;
@@ -156,10 +156,11 @@ html {
 		margin-right: 0.5rem;
 		font-size: 3rem;
 	}
+ /* --------------- headings ---------------- */
 }
  h5 {
 	text-transform: capitalize;
-	font-size: 2rem;
+	font-size: 1rem;
 	margin-top: 1rem;
 	letter-spacing: var(--mainSpacing);
 	text-align: left;
@@ -167,7 +168,7 @@ html {
   
  h6 {
 	margin-top: 0.7rem;
-	font-size: 3rem;
+	font-size: 1.5rem;
 	letter-spacing: var(--mainSpacing);
 	color: var(--primaryColor);
 	text-align: left;
@@ -194,6 +195,8 @@ html {
 	padding: 2rem 4rem;
     z-index: 999;
  }
+
+ /* --------------- End of Products ---------------- */
 
 .input{
 	text-align: center;
@@ -249,3 +252,56 @@ html {
 	margin:40px 0;
 	font-size:20px;
   }
+
+/* --------------- Products ---------------- */
+
+.products {
+	padding-top: 0rem;
+  }
+
+  .products-center {
+	width: 100vw;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	grid-column-gap: 0.5rem;
+	grid-row-gap: 0rem;
+	padding-top: 0rem;
+  }
+  .img-container {
+	position: relative;
+	overflow: hidden;
+	  }
+  .bag-btn {
+	position: absolute;
+	top: 70%;
+	right: 0;
+	border: none;
+	text-transform: uppercase;
+	padding: 0.5rem 0.75rem;
+	letter-spacing: normal;
+	font-weight: bold;
+	transition: var(--mainTransition);
+	transform: translateX(101%);
+	cursor: pointer;
+  }
+  .bag-btn:hover {
+	color: yellowgreen;
+  }
+  .fa-shopping-cart {
+	margin-right: 0.5rem;
+  }
+  .img-container:hover .bag-btn {
+	transform: translateX(0);
+  }
+  .product-img {
+	display: block;
+	width: 100%;
+	height: 34rem;
+	min-height: 12rem;
+	transition: var(--mainTransition);
+  }
+  .img-container:hover .product-img {
+	opacity: 0.5;
+  }  
+  
+/* ---------------End of Products ---------------- */
