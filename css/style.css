@@ -62,35 +62,7 @@ html {
 	color: red;
 }
 
-.gallery .main .box-container{
-	display: flex;
-	gap: 1.5rem;
-	flex-wrap: wrap;
-}
-.gallery .main .box-container .box{
-	flex: 1 1 30%;
-}
-.gallery .main .box-container .boxb{
-	flex: 1 1 35%;
-}
-
-.gallery .main .box-container .box img{
-	height: 34rem;
-	width: 100%;
-	object-fit: cover;
-}
-.gallery{
-	background-color: var(--background);
-	padding: 5rem ;
-	color: var(--background);
-}
-
-
-.gallery .main{
-	background-color: var(--main-color);
-	padding:1rem 3rem 3rem 3rem;
-}
-
+/* ----- Start of contact Form ---------------- */
 .contact .main .box-container .image{
 	width: 40rem;
 }
@@ -137,6 +109,8 @@ html {
 	flex-wrap: wrap;
 }
 
+/* -------- End of Contact ------------- */
+
 
 /* media querries */
 @media (max-width: 1300px) {
@@ -156,7 +130,7 @@ html {
 		margin-right: 0.5rem;
 		font-size: 3rem;
 	}
- /* --------------- headings ---------------- */
+ /* -------- start of headings ---------------- */
 }
  h5 {
 	text-transform: capitalize;
@@ -196,7 +170,9 @@ html {
     z-index: 999;
  }
 
- /* --------------- End of Products ---------------- */
+ /* ---------- End of Headings ---------------- */
+
+ /* -----------start of Weather Display-------------- */
 
 .input{
 	text-align: center;
@@ -229,11 +205,10 @@ html {
   .card{
 	width: 50%;
 	background: #8b8bb1;
-	height: 20vh;
-	margin: 50px auto;
+	height: 5vh;
+	margin: 10px auto;
 	border-radius: 2px;
-  }
-  
+ }
   
   .close{
 	float: right;
@@ -241,17 +216,8 @@ html {
 	cursor: pointer;
 	margin-right: 20px;
   }
-  
-  .card h1{
-	padding: 5px 0;
-	text-align: center;
-  }
-  
-  .card p{
-	text-align: center;
-	margin:40px 0;
-	font-size:20px;
-  }
+
+  /* --------- end of weather display --------- */
 
 /* --------------- Products ---------------- */
 
