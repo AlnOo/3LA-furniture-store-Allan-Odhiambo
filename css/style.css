@@ -22,45 +22,22 @@ html {
 	scroll-behavior: smooth;
 }
 
-.header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	position: relative;
-    font-size: 2.5rem;
-	margin-left: 3rem;
-	padding: 2rem 4rem;
-    z-index: 999;
-}
-
-.header .logo {
-	color: rgb(190, 30, 30);
-	font-size: 20rem;
-    font-weight: bolder;
-	margin-left: 1rem;
-}
-
-.home-header {
-	background: url(../images/heroimage2.jpg);
-	height: 100vh;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	position: relative;
-}
+/* ------------ Start of cart ---------------- */
 .cart-btn {
-	position: relative;
+	position:absolute;
 	cursor: pointer;
 }
+
 .cart-items {
 	position: absolute;
 	top: 120px;
-	right: 210px;
+	right: 25px;
 	background: white;
 	padding: 0 1px;
 	border-radius: 10%;
 	color: red;
 }
+/* ------------ End of cart ---------------- */
 
 /* ----- Start of contact Form ---------------- */
 .contact .main .box-container .image{
@@ -111,32 +88,56 @@ html {
 
 /* -------- End of Contact ------------- */
 
-
-/* media querries */
-@media (max-width: 1300px) {
-	.home-header h3 {
-		color: #fff;
-		font-size: 5rem;
-		position: absolute;
-		left: 15.5%;
-		top: 13%;
-	}
+/* -------- start of headings ---------------- */
+ .header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+    font-size: 2.5rem;
+	margin-left: 3rem;
+	padding: 2rem 4rem;
+    z-index: 999;
 }
 
-    @media (max-width: 768px) {
-	#menu-btn {
-		display: initial;
-		transition: 0.1s linear;
-		margin-right: 0.5rem;
-		font-size: 3rem;
-	}
- /* -------- start of headings ---------------- */
+.header .logo {
+	text-align: center;
+	color: rgb(190, 30, 30);
+	font-size: 200px;
+    font-weight: bolder;
+	margin-left: 1rem;
+	position: absolute;
+	top:  100px;
+	right: 40%;
 }
+
+.header .motto {
+	text-align: center;
+	color: rgb(237, 70, 70);
+	font-size: 30px;
+    font-weight: bolder;
+	margin-left: 1rem;
+	position: absolute;
+	border-bottom: 2px solid black;
+	top:  300px;
+	right: 40%;
+}
+
+.home-header {
+	background: url(../images/heroimage2.jpg);
+	height: 100vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
  h5 {
 	text-transform: capitalize;
 	font-size: 1rem;
 	margin-top: 1rem;
 	letter-spacing: var(--mainSpacing);
+	color: #1e1b18;
 	text-align: left;
   }
   
@@ -144,7 +145,7 @@ html {
 	margin-top: 0.7rem;
 	font-size: 1.5rem;
 	letter-spacing: var(--mainSpacing);
-	color: var(--primaryColor);
+	color: black;
 	text-align: left;
   }
 
@@ -169,55 +170,16 @@ html {
 	padding: 2rem 4rem;
     z-index: 999;
  }
+ 
+ .header .navbar {
+	position: absolute;
+	color: #1e1b18;
+	right: 20px;
+	top: 150px;
+	
+ }
 
  /* ---------- End of Headings ---------------- */
-
- /* -----------start of Weather Display-------------- */
-
-.input{
-	text-align: center;
-	margin: 50px auto;
-	max-height: 10px;
-  }
-  
-  input[type="submit"]{
-	padding: 15px 30px;
-	background: #e7e7e7;
-	border: none;
-	border-radius: 1px;
-	font-family: "Nunito",sans-serif;
-	font-weight:bold;
-	font-size: 20px;
-  }
-  
-  .input input[type="text"]{
-	width: 600px;
-	height: 55px;
-	padding: 5px 10px;
-	background: #e7e7e7;
-	border: none;
-	border-radius: 1px;
-	font-family: "Nunito",sans-serif;
-	font-weight:bold;
-	font-size: 20px;
-  }
-  
-  .card{
-	width: 50%;
-	background: #8b8bb1;
-	height: 5vh;
-	margin: 10px auto;
-	border-radius: 2px;
- }
-  
-  .close{
-	float: right;
-	margin-top: -2px;
-	cursor: pointer;
-	margin-right: 20px;
-  }
-
-  /* --------- end of weather display --------- */
 
 /* --------------- Products ---------------- */
 
@@ -271,3 +233,153 @@ html {
   }  
   
 /* ---------------End of Products ---------------- */
+
+/* --------------- Cart ---------------- */
+.cart-overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	transition: var(--mainTransition);
+	background: rgb(240, 157, 81, 0.5);
+	z-index: 2;
+	visibility: hidden;
+  }
+  .cart {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	overflow: scroll;
+	z-index: 3;
+	background: rgb(231, 226, 221);
+	padding: 1.5rem;
+	transition: var(--mainTransition);
+	transform: translateX(100%);
+  }
+  .showCart {
+	transform: translateX(0);
+  }
+  .transparentBcg {
+	visibility: visible;
+  }
+  @media screen and (min-width: 768px) {
+	.cart {
+	  width: 30vw;
+	  min-width: 450px;
+	}
+  }
+  
+  .close-cart {
+	font-size: 1.7rem;
+	cursor: pointer;
+  }
+  .cart h2 {
+	text-transform: capitalize;
+	text-align: center;
+	letter-spacing: var(--mainSpacing);
+	margin-bottom: 2rem;
+  }
+  /*---------- Cart Item -------------------- */
+  .cart-item {
+	display: grid;
+	align-items: center;
+	grid-template-columns: auto 1fr auto;
+	grid-column-gap: 1.5rem;
+	margin: 1.5rem 0;
+  }
+  .cart-item img {
+	width: 75px;
+	height: 75px;
+  }
+  .cart-item h4 {
+	font-size: 0.85rem;
+	text-transform: capitalize;
+	letter-spacing: var(--mainSpacing);
+  }
+  .cart-item h5 {
+	margin: 0.5rem 0;
+	letter-spacing: var(--mainSpacing);
+  }
+  .item-amount {
+	text-align: center;
+  }
+  .remove-item {
+	color: grey;
+	cursor: pointer;
+  }
+  .fa-chevron-up,
+  .fa-chevron-down {
+	color: var(--primaryColor);
+	cursor: pointer;
+  }
+  /*---------- End of Cart Item -------------------- */
+  
+  .cart-footer {
+	margin-top: 2rem;
+	letter-spacing: var(--mainSpacing);
+	text-align: center;
+  }
+  .cart-footer h3 {
+	text-transform: capitalize;
+	margin-bottom: 1rem;
+  }
+  
+  /* --------------- End of Cart ---------------- */
+  /* --------------- weather dashboard ---------------- */
+
+  @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap" );
+		body,
+		html {
+			margin: 0;
+			height: 100%;
+			color: white;
+			font-family: Lato, "Lucida Grande", Tahoma, Sans-Serif;
+		}
+
+		.front {
+			height: 100%;
+		}
+
+		.left-container {
+			width: 100%;
+			height: 100%;
+		}
+
+
+		.date-container {
+			position: absolute;
+			top: 25px;
+			left: 35px;
+		}
+
+		.day {
+			display: block;
+			font-size: 60px;
+			font-weight: 900;
+		}
+
+		.date {
+			display: block;
+			font-size: 30px;
+			font-weight: 300;
+		}
+
+		.weather {
+			position: absolute;
+			left: 35px;
+			bottom: 40px;
+		}
+
+		.degrees {
+			display: block;
+			font-size: 110px;
+			font-weight: 900;
+		}
+
+		.desc {
+			font-size: 30px;
+		}
+/* --------------- End of weather dashboard------------ */

@@ -1,25 +1,34 @@
-var input = document.querySelector('.input_text');
-var main = document.querySelector('#name');
-var temp = document.querySelector('.temp');
-var desc = document.querySelector('.desc');
-var clouds = document.querySelector('.clouds');
-var button= document.querySelector('.submit');
+const API_KEY = "";
+	const city     = "nairobi";
+	const unit     = "F";
+	const unit_map = "imperial"
 
+	const monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+	const dayNames = [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ];
 
-button.addEventListener('click', function(name){
-fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=8a975fdba5698dfbcba95da718935be0')
-.then(response => response.json())
-.then(data => {
-  var tempValue = data['main']['temp'];
-  var nameValue = data['name'];
-  var descValue = data['weather'][0]['description'];
+	function updateDateInfo() {
+		var d = new Date;
+		var year = d.getFullYear();
+		var month = monthNames[ d.getMonth() ];
+		var date = d.getDate();
+		var day = dayNames[ d.getDay() ];
 
-  main.innerHTML = nameValue;
-  desc.innerHTML = "Desc - "+descValue;
-  temp.innerHTML = "Temp - "+tempValue;
-  input.value ="";
+		var dateSting = month + ' ' + date + ', ' + year;
 
-})
+		document.getElementById( 'day' ).innerHTML = day;
+		document.getElementById( 'date' ).innerHTML = dateSting;
+	}
 
-.catch(err => alert("Wrong city name!"));
-})
+	function updateWeatherInfo() {
+		fetch( `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit_map}&APPID=${API_KEY}` )
+		.then( response => response.json() ).then( data => {
+			document.getElementById( 'desc' ).innerHTML = data['weather'][0]['main'];
+			document.getElementById( 'temp' ).innerHTML = Math.round( data['main']['temp'] );
+		} )
+	}
+
+	updateDateInfo();
+	updateWeatherInfo();
+
+	setTimeout( updateDateInfo, 30 * 60 * 1000 );
+	setTimeout( updateWeatherInfo, 5 * 60 * 1000 );
