@@ -39,55 +39,6 @@ html {
 }
 /* ------------ End of cart ---------------- */
 
-/* ----- Start of contact Form ---------------- */
-.contact .main .box-container .image{
-	width: 40rem;
-}
-
-.contact{
-	background-color: var(--background);
-	padding: 3rem ;
-	color: var(--background);
-
-}
-.contact .main{
-	background-color: var(--main-color);
-	padding:2rem 3rem 3rem 3rem;
-
-}
-.contact .main .box-container .form input{
-	padding: .5rem 2rem;
-    margin: 1rem 0;
-    width: 100%;
-    font-size: 1.7rem;
-    border-radius: .5rem;
-    border: .1rem solid rgba(0, 0, 0, .1);
-	background-color: var(--inputs);
-}
-.contact .main .box-container .form label{
-	font-size: 2rem;
-	font-weight: bold;
-}
-.contact .main .box-container .form textarea{
-
-    height: 18rem;
-    resize: none;
-    width: 100%;
-}
-.contact .main .box-container .form{
-	font-size: 2.5rem;
-}
-
-.contact .main .box-container{
-	display: flex;
-	gap: 2.5rem;
-	justify-content: center;
-	padding-top: 2rem;
-	flex-wrap: wrap;
-}
-
-/* -------- End of Contact ------------- */
-
 /* -------- start of headings ---------------- */
  .header {
 	display: flex;
@@ -120,7 +71,7 @@ html {
 	position: absolute;
 	border-bottom: 2px solid black;
 	top:  300px;
-	right: 40%;
+	right: 41%;
 }
 
 .home-header {
@@ -134,11 +85,11 @@ html {
 
  h5 {
 	text-transform: capitalize;
-	font-size: 1rem;
-	margin-top: 1rem;
+	font-size: 1.5rem;
+	margin-top: 1px;
 	letter-spacing: var(--mainSpacing);
 	color: #1e1b18;
-	text-align: left;
+	text-align: center;
   }
   
  h6 {
@@ -146,7 +97,14 @@ html {
 	font-size: 1.5rem;
 	letter-spacing: var(--mainSpacing);
 	color: black;
-	text-align: left;
+	text-align: center;
+  }
+
+  h7 {
+	margin-top: 0.7rem;
+	font-size: 4rem;
+	letter-spacing: var(--mainSpacing);
+	text-align: center;
   }
 
  h4{
@@ -184,7 +142,9 @@ html {
 /* --------------- Products ---------------- */
 
 .products {
-	padding-top: 0rem;
+	width: 100vw;
+	background-color: #5191ea;
+	padding-left: 4px;
   }
 
   .products-center {
@@ -194,10 +154,12 @@ html {
 	grid-column-gap: 0.5rem;
 	grid-row-gap: 0rem;
 	padding-top: 0rem;
+	
   }
   .img-container {
 	position: relative;
 	overflow: hidden;
+	padding: 4px;
 	  }
   .bag-btn {
 	position: absolute;
@@ -234,101 +196,8 @@ html {
   
 /* ---------------End of Products ---------------- */
 
-/* --------------- Cart ---------------- */
-.cart-overlay {
-	position: fixed;
-	top: 0;
-	right: 0;
-	width: 100%;
-	height: 100%;
-	transition: var(--mainTransition);
-	background: rgb(240, 157, 81, 0.5);
-	z-index: 2;
-	visibility: hidden;
-  }
-  .cart {
-	position: fixed;
-	top: 0;
-	right: 0;
-	width: 100%;
-	height: 100%;
-	overflow: scroll;
-	z-index: 3;
-	background: rgb(231, 226, 221);
-	padding: 1.5rem;
-	transition: var(--mainTransition);
-	transform: translateX(100%);
-  }
-  .showCart {
-	transform: translateX(0);
-  }
-  .transparentBcg {
-	visibility: visible;
-  }
-  @media screen and (min-width: 768px) {
-	.cart {
-	  width: 30vw;
-	  min-width: 450px;
-	}
-  }
   
-  .close-cart {
-	font-size: 1.7rem;
-	cursor: pointer;
-  }
-  .cart h2 {
-	text-transform: capitalize;
-	text-align: center;
-	letter-spacing: var(--mainSpacing);
-	margin-bottom: 2rem;
-  }
-  /*---------- Cart Item -------------------- */
-  .cart-item {
-	display: grid;
-	align-items: center;
-	grid-template-columns: auto 1fr auto;
-	grid-column-gap: 1.5rem;
-	margin: 1.5rem 0;
-  }
-  .cart-item img {
-	width: 75px;
-	height: 75px;
-  }
-  .cart-item h4 {
-	font-size: 0.85rem;
-	text-transform: capitalize;
-	letter-spacing: var(--mainSpacing);
-  }
-  .cart-item h5 {
-	margin: 0.5rem 0;
-	letter-spacing: var(--mainSpacing);
-  }
-  .item-amount {
-	text-align: center;
-  }
-  .remove-item {
-	color: grey;
-	cursor: pointer;
-  }
-  .fa-chevron-up,
-  .fa-chevron-down {
-	color: var(--primaryColor);
-	cursor: pointer;
-  }
-  /*---------- End of Cart Item -------------------- */
-  
-  .cart-footer {
-	margin-top: 2rem;
-	letter-spacing: var(--mainSpacing);
-	text-align: center;
-  }
-  .cart-footer h3 {
-	text-transform: capitalize;
-	margin-bottom: 1rem;
-  }
-  
-  /* --------------- End of Cart ---------------- */
-  /* --------------- weather dashboard ---------------- */
+/* --------------- weather dashboard ------------ */
 
   @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap" );
 		body,
@@ -383,3 +252,77 @@ html {
 			font-size: 30px;
 		}
 /* --------------- End of weather dashboard------------ */
+
+/* --------------- start of footer----------- */
+
+
+
+.footer__box {
+	display: grid;
+	background-color: #0c0d0f;
+	width: 100vw;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	grid-column-gap: 0.5rem;
+	grid-row-gap: 0rem;
+	padding-top: 0rem;
+  }
+ 
+  .footer
+  {
+	position: relative;
+	padding: 4px;
+  }
+  
+a {
+	font-size: 20px;
+	text-decoration: none;
+	color: var(--dark-color);
+	
+  }
+
+.footer__copy
+{
+  color: #d3ccc5;
+  background-color: #1e1b18;
+  text-align: center;
+}
+
+.form__text {
+	color: #d3ccc5;
+	font-size: 20px;
+  }
+
+/*BUTTONS*/
+
+.newsletter__form
+  {
+	background-color: #1e1b18;
+	position: absolute;
+	top: 50px;
+ }
+
+.button{
+  background-color: #1e1b18;
+  color: white;
+  padding: 1rem;
+  font-size: var(--small-font-size);
+  font-weight:bolder;
+  transition: .3s;
+}
+
+.button:hover
+{
+  background-color: var(--first-color-alt);
+}
+
+.subscribe {
+	display: grid;
+	background-color: #0c0d0f;
+	width: 100vw;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	grid-column-gap: 0.5rem;
+	grid-row-gap: 0rem;
+	padding-top: 0rem;
+  }
+
+/* --------------- end of footer----------- */
